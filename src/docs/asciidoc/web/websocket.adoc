@@ -60,8 +60,8 @@ WebSocket handler to a specific URL:
 	public class WebSocketConfig implements WebSocketConfigurer {
 
 		@Override
-		public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-			registry.addHandler(myHandler(), "/myHandler");
+		public void registerWebSocketHandlers(WebSocketHandlerRegistry registry, WebSocketHandler myHandler) {
+			registry.addHandler(myHandler, "/myHandler");
 		}
 
 		@Bean
